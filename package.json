@@ -1,0 +1,36 @@
+{
+  "name": "bookfinder",
+  "version": "1.0.0",
+  "description": "Search for the books you enjoy!",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgproctor/bookFinder.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgproctor/bookFinder/issues"
+  },
+  "homepage": "https://github.com/jgproctor/bookFinder#readme",
+  "dependencies": {
+    "chalk": "4.1.0",
+    "express": "4.17.1",
+    "nodemon": "2.0.6"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}
