@@ -1,6 +1,7 @@
 {
   "name": "bookfinder",
   "version": "1.0.0",
+  "type": "module",
   "description": "Search for the books you enjoy!",
   "main": "index.js",
   "scripts": {
@@ -19,8 +20,11 @@
   "homepage": "https://github.com/jgproctor/bookFinder#readme",
   "dependencies": {
     "chalk": "4.1.0",
+    "ejs": "3.1.5",
     "express": "4.17.1",
-    "nodemon": "2.0.6"
+    "nodemon": "2.0.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "nodemonConfig": {
     "restartable": "rs",
