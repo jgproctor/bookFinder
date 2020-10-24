@@ -1,31 +1,10 @@
 import express from 'express';
 import chalk from 'chalk';
-import react from 'react';
-import reactDOM from 'react-dom';
 
 const app = express();
-
 const { green } = chalk;
-
-const { createElement } = react;
-
 const port = process.env.port || 3000;
 
-function Welcome(props) {
-    createElement(
-        'h1',
-        null,
-        props.name
-    )
-}
-
-function App() {
-    createElement(
-        'div',
-        null,
-        Welcome
-    )
-}
 
 if (typeof window === 'undefined') {
     console.log('hello');
