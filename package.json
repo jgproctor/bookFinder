@@ -21,6 +21,7 @@
   "homepage": "https://github.com/jgproctor/bookFinder#readme",
   "dependencies": {
     "axios": "0.21.0",
+    "body-parser": "1.19.0",
     "chalk": "4.1.0",
     "debug": "4.2.0",
     "ejs": "3.1.5",
