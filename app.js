@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
-import express from 'express';
-import chalk from 'chalk';
-import morgan from 'morgan';
-import bodyParser from 'body-parser';
-import bookRouter from './src/routes/bookRouter.js';
+const express = require('express');
+const chalk = require('chalk');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const bookRouter = require('./src/routes/bookRouter')();
 
 const app = express();
 const { green } = chalk;

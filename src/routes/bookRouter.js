@@ -1,21 +1,25 @@
-import express from 'express';
-import searchBooks from '../services/goodreadsService.js';
+/* eslint-disable import/extensions */
+const express = require('express');
+const searchBooks = require('../services/goodreadsService.js');
 
-function router() {
-  const bookRouter = express.router();
+async function router() {
+  const bookRouter = express.Router();
 
   bookRouter.route('/search/books')
     .get((req, res) => {
-      if (req.query.q) {
-        const results = searchBooks(req.query.q);
-        res.json(results);
-      } else {
-        const allBooks = searchBooks();
-        res.json(allBooks);
-      }
+      (async function search() {
+        if (req.query.q) {
+          const results = await searchBooks(req.query.q);
+          console.log(results);
+          res.json(results);
+        } else {
+          const allBooks = await searchBooks();
+          res.json(allBooks);
+        }
+      }());
     });
 
   return bookRouter;
 }
 
-module.exports = router();
+module.exports = router;

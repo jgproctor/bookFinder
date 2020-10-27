@@ -1,7 +1,6 @@
 {
   "name": "bookfinder",
   "version": "1.0.0",
-  "type": "module",
   "description": "Search for the books you enjoy!",
   "main": "index.js",
   "scripts": {

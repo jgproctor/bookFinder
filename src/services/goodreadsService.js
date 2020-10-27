@@ -1,6 +1,8 @@
 const axios = require('axios');
 const xml2js = require('xml2js');
-const debug = require('debug')('app:goodreadsService');
+const debug = require('debug');
+
+debug('app:goodreadsService');
 
 const parser = xml2js.Parser({ explicitArray: false });
 
@@ -14,7 +16,7 @@ function goodreadsService() {
               debug(err);
             } else {
               debug(result);
-              resolve(result.GoodreadsResponse.book);
+              resolve(result.GoodreadsResponse.search.results.work);
             }
           });
         })
@@ -24,7 +26,7 @@ function goodreadsService() {
         });
     });
   }
-  return { searchBooks };
+  return searchBooks;
 }
 
 module.exports = goodreadsService();
