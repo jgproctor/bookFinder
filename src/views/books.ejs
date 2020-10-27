@@ -1,0 +1,14 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div>Search Results</div>
+        <a href="/">Return Home</a>
+        <br>
+        <%for(var i = 0; i < results.length; i++) {%>
+                <li>
+                    <%=results[i].best_book.title%>
+                </li>
+                <%}%>
+    </body>
+</html>
