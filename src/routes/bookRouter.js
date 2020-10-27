@@ -2,7 +2,7 @@
 const express = require('express');
 const searchBooks = require('../services/goodreadsService.js');
 
-async function router() {
+function router() {
   const bookRouter = express.Router();
 
   bookRouter.route('/search/books')
