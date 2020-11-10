@@ -18,7 +18,7 @@ function router() {
   bookRouter.route('/search/books')
     .get((req, res) => {
       (async function search() {
-        if (req.query.q) {
+        if (req.query.q && req.query.q !== '') {
           const results = await searchBooks(req.query.q);
           renderResults(res, results);
         } else {

@@ -1,0 +1,16 @@
+.title {
+  text-align: center;
+  color: rgba(13, 40, 158, 0.877);
+}
+
+.content {
+  background-color: gray;
+}
+
+.book {
+  padding-bottom: 5rem;
+}
+.bookInfo {
+  position: absolute;
+  right: 150px;
+}

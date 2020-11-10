@@ -1,14 +1,23 @@
 <html>
     <head>
+        <link rel="stylesheet" href="/books.css" />
     </head>
-    <body>
-        <div>Search Results</div>
-        <a href="/">Return Home</a>
-        <br>
+    <body class="content">
+        <div>
+            <a href="/">Return Home</a>
+            <h1 class="title">
+                BookFinder
+            </h1>
+        </div>
+        <h2>Search Results</h2>
         <%for(var i = 0; i < results.length; i++) {%>
-          <li>
-              <%=results[i].best_book.title%>
-          </li>
+          <div class="book">
+            <img src="<%=results[i].best_book.image_url%>">
+            <li class="bookInfo">
+                <%=results[i].best_book.title%>
+            </li>
+          </div>
+          <br>
         <%}%>
     </body>
 </html>

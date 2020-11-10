@@ -1,10 +1,21 @@
 <html>
     <head>
+        <link rel="stylesheet" href="/index.css" />
     </head>
-    <body>
-        <div class="greeting">Hello</div>
+    <body class="content">
+        <div>
+            <h1 class="title">
+                BookFinder
+            </h1>
+            <h3>
+                Welcome!
+            </h3>
+        </div>
+        <div>
+            <p>Find a new book to dive into!</p>
+        </div>
         <form name="searchForm" action="/api/search/books" method="get">
-            Search Books: <input name="q" id="q"/><br/>
+            Search for a book: <input placeholder="george orwell" name="q" id="q"/>
             <input type="submit" value="Submit" />
         </form>
     </body>
