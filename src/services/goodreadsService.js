@@ -1,15 +1,18 @@
-const axios = require('axios');
-const xml2js = require('xml2js');
-const debug = require('debug');
+import xml2js from 'xml2js';
+import debug from 'debug';
+import axios from 'axios';
+
+const { get } = axios;
+const { Parser } = xml2js;
 
 debug('app:goodreadsService');
 
-const parser = xml2js.Parser({ explicitArray: false });
+const parser = new Parser({ explicitArray: false });
 
 function goodreadsService() {
   function searchBooks(searchQuery) {
     return new Promise((resolve, reject) => {
-      axios.get(`https://www.goodreads.com/search/index.xml?key=T80WiLWEoAzYnXWFqsAA&q=${searchQuery}`)
+      get(`https://www.goodreads.com/search/index.xml?key=T80WiLWEoAzYnXWFqsAA&q=${searchQuery}`)
         .then((response) => {
           parser.parseString(response.data, (err, result) => {
             if (err) {
@@ -29,4 +32,4 @@ function goodreadsService() {
   return searchBooks;
 }
 
-module.exports = goodreadsService();
+export default goodreadsService();

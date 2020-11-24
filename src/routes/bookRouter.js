@@ -1,10 +1,12 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable import/extensions */
-const express = require('express');
-const searchBooks = require('../services/goodreadsService.js');
+import express from 'express';
+import searchBooks from '../services/goodreadsService.js';
 
-function router() {
-  const bookRouter = express.Router();
+const { Router } = express;
+
+export default function bookRouter() {
+  const router = Router();
 
   function renderResults(res, results) {
     res.render(
@@ -15,20 +17,21 @@ function router() {
     );
   }
 
-  bookRouter.route('/search/books')
+  router.route('/search/books')
     .get((req, res) => {
+      console.log("3");
       (async function search() {
         if (req.query.q && req.query.q !== '') {
+          console.log("Hello!");
           const results = await searchBooks(req.query.q);
           renderResults(res, results);
         } else {
+          console.log("2");
           const results = await searchBooks();
           renderResults(res, results);
         }
       }());
     });
 
-  return bookRouter;
+  return router;
 }
-
-module.exports = router;
