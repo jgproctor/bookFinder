@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-plusplus */
 /* eslint-disable import/extensions */
 import express from 'express';
@@ -25,7 +26,6 @@ export default function bookRouter() {
       (async function search() {
         if (req.query.q && req.query.q !== '') {
           const results = await searchBooks(req.query.q);
-          console.log(results);
           renderResults(res, results);
         } else {
           const results = await searchBooks();

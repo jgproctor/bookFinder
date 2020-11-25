@@ -4,17 +4,25 @@
 }
 
 .returnHome {
-  color:  rgba(13, 40, 158, 0.877);
+  color:  red(13, 40, 158, 0.877);
 }
 
 .content {
   background-color: lightcoral;
 }
 
-.bookInfo {
+.bookTitleLabel {
   position: relative;
   display: flex;
-  color: rgba(13, 40, 158, 0.877);
+  color: black(13, 40, 158, 0.877);
+  margin-bottom: 2 rem;
+}
+
+.bookAuthorLabel {
+  position: relative;
+  display: flex;
+  color: black(13, 40, 158, 0.877);
+  margin-bottom: 2 rem;
 }
 
 .searchResultsHeading {
@@ -23,9 +31,19 @@
 
 #searchResultsTable {
   background: black;
-  display: auto;
+  width: auto;
+  height: auto;
 }
 
 #bookImage {
   text-align: center;
+  column-width: auto;
+}
+
+#bookInfo {
+  width: auto;
+}
+
+.divider {
+  display: inherit;
 }
