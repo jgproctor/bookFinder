@@ -23,12 +23,11 @@
             Search Results
         </h3>
         <div class="container" id="searchResultsTable">
-            <%if (!results || results.length == 0) {%>
-                <p>
+            <%if (results === undefined || results.length == 0) {%>
+                <div class="emptyResults">
                     No results found!
-                </p>
-
-            <%}%>
+                <div>
+            <%} else {%>
             <%for(var i = 0; i < results.length; i++) {%>
                 <div class="row">
                     <div class="col-2 border bg-light" id="bookImage">
@@ -53,6 +52,7 @@
                         </div>
                     </div>
                 </div>
+            <%}%>
             <%}%>
         </div>
     </body>

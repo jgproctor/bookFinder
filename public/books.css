@@ -47,3 +47,8 @@
 .divider {
   display: inherit;
 }
+
+.container .emptyResults {
+  background-color: lightcoral;
+  display: auto;
+}
