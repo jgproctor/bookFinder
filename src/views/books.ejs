@@ -22,38 +22,38 @@
         <h3 class="searchResultsHeading">
             Search Results
         </h3>
-        <div class="container" id="searchResultsTable">
-            <%if (results === undefined || results.length == 0) {%>
-                <div class="emptyResults">
-                    No results found!
-                <div>
-            <%} else {%>
-            <%for(var i = 0; i < results.length; i++) {%>
-                <div class="row">
-                    <div class="col-2 border bg-light" id="bookImage">
-                        <img src="<%=results[i].best_book.image_url%>">
-                    </div>  
-                    <div class="col-3 bg-light" id="bookInfo">
-                        <div>
-                            <ul>
-                                <li class="bookTitleLabel">
-                                    Title: 
-                                    <br>
-                                    <%=results[i].best_book.title%>
-                                </li>
-                                <hr class="divider" color="black" display="inherit">
-                                <li class="bookAuthorLabel">
-                                    Author: 
-                                    <br>
-                                    <%=results[i].best_book.author.name%>
-                                </li>
-                                <a href="https://www.goodreads.com/book/title?id=<%=results[i].best_book.title%>">More info</a>
-                            </ul>
+        <%if (results === undefined || results.length == 0) {%>
+            <div class="alert alert-info" style="text-align:center;" role="alert">
+                No results found!
+            </div>
+        <%} else {%>
+            <div class="container" id="searchResultsTable">
+                <%for(var i = 0; i < results.length; i++) {%>
+                    <div class="row">
+                        <div class="col-2 border bg-light" id="bookImage">
+                            <img src="<%=results[i].best_book.image_url%>">
+                        </div>  
+                        <div class="col-3 bg-light" id="bookInfo">
+                            <div>
+                                <ul>
+                                    <li class="bookTitleLabel">
+                                        Title: 
+                                        <br>
+                                        <%=results[i].best_book.title%>
+                                    </li>
+                                    <hr class="divider" color="black" display="inherit">
+                                    <li class="bookAuthorLabel">
+                                        Author: 
+                                        <br>
+                                        <%=results[i].best_book.author.name%>
+                                    </li>
+                                    <a href="https://www.goodreads.com/book/title?id=<%=results[i].best_book.title%>">More info</a>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <%}%>
-            <%}%>
-        </div>
+                <%}%>
+            </div>
+        <%}%>
     </body>
 </html>
