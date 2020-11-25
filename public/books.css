@@ -3,14 +3,29 @@
   color: rgba(13, 40, 158, 0.877);
 }
 
-.content {
-  background-color: gray;
+.returnHome {
+  color:  rgba(13, 40, 158, 0.877);
 }
 
-.book {
-  padding-bottom: 5rem;
+.content {
+  background-color: lightcoral;
 }
+
 .bookInfo {
-  position: absolute;
-  right: 150px;
+  position: relative;
+  display: flex;
+  color: rgba(13, 40, 158, 0.877);
+}
+
+.searchResultsHeading {
+  margin-bottom: 2rem;
+}
+
+#searchResultsTable {
+  background: black;
+  display: auto;
+}
+
+#bookImage {
+  text-align: center;
 }
