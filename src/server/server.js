@@ -7,7 +7,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 // eslint-disable-next-line import/extensions
-import bookRouter from '../routes/bookRouter';
+import bookRouter from '../routes/bookRouter.js';
 
 const { urlencoded, json } = bodyParser;
 const { join, dirname } = path;
@@ -21,12 +21,11 @@ const port = process.env.port || 3000;
 server.use(urlencoded({ extended: true }));
 server.use(json());
 server.use(morgan('tiny'));
-
-server.use(express.static(join(__dirname, './public/')));
+server.use(express.static(join(__dirname, '../../public')));
 server.set('views', './src/views');
 server.set('view engine', 'ejs');
 
-server.use('/api', bookRouter);
+server.use('/api', bookRouter());
 
 server.get('/', (req, res) => {
   res.render(

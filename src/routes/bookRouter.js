@@ -1,7 +1,10 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable import/extensions */
 import express from 'express';
+import debug from 'debug';
 import searchBooks from '../services/goodreadsService.js';
+
+debug('app:bookRouter');
 
 const { Router } = express;
 
@@ -19,14 +22,12 @@ export default function bookRouter() {
 
   router.route('/search/books')
     .get((req, res) => {
-      console.log("3");
       (async function search() {
         if (req.query.q && req.query.q !== '') {
-          console.log("Hello!");
           const results = await searchBooks(req.query.q);
+          console.log(results[0].original_publication_year);
           renderResults(res, results);
         } else {
-          console.log("2");
           const results = await searchBooks();
           renderResults(res, results);
         }
