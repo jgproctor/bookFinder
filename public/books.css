@@ -1,20 +1,13 @@
 .title {
   text-align: center;
-  color: rgba(24, 115, 233, 0.877);
+  color: rgba(24, 62, 233, 0.877);
 }
 
 .content {
-  background-color: burlywood;
+  background-color: rgb(135, 222, 164);
 }
 
-.bookTitleLabel {
-  position: relative;
-  display: flex;
-  color: black(13, 40, 158, 0.877);
-  margin-bottom: 2 rem;
-}
-
-.bookAuthorLabel {
+.bookTitleLabel, .bookAuthorLabel {
   position: relative;
   display: flex;
   color: black(13, 40, 158, 0.877);
@@ -27,7 +20,7 @@
 
 .row {
   display: flex;
-  background-color: burlywood;
+  background-color: rgb(135, 222, 164);
 }
 
 #bookImage {

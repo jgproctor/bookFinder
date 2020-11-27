@@ -23,6 +23,7 @@ server.use(urlencoded({ extended: true }));
 server.use(json());
 server.use(morgan('tiny'));
 server.use(express.static(join(__dirname, '../../public')));
+server.use(express.static(join(__dirname, '../../assets/images')));
 server.set('views', './src/views');
 server.set('view engine', 'ejs');
 

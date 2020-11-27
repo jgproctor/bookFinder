@@ -10,7 +10,7 @@
     <g id="doodle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g>
             <mask id="mask-2" fill="white">
-                <use xlink:href="data:image/png;base64"></use>
+                <use xlink:href="#path-1"></use>
             </mask>
             <g id="Mask"></g>
             <g id="book" mask="url(#mask-2)">
