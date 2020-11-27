@@ -12,11 +12,12 @@ const { Router } = express;
 export default function bookRouter() {
   const router = Router();
 
-  function renderResults(res, results) {
+  function renderResults(res, results, searchQuery = '') {
     res.render(
       'books.ejs',
       {
         results,
+        searchQuery
       }
     );
   }
@@ -26,7 +27,7 @@ export default function bookRouter() {
       (async function search() {
         if (req.query.q && req.query.q !== '') {
           const results = await searchBooks(req.query.q);
-          renderResults(res, results);
+          renderResults(res, results, req.query.q);
         } else {
           const results = await searchBooks();
           renderResults(res, results);

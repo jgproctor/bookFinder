@@ -23,7 +23,11 @@
             Data provided by goodreads! <img src="public\assets\goodReadsLogo.svg" disabled />
         </div>
         <h3 class="searchResultsHeading">
-            Search Results
+            <%if (searchQuery === '') {%>
+                Search Results
+            <%} else {%>
+                Search Results for <%=searchQuery%>
+            <%}%>
         </h3>
         <%if (results === undefined || results.length == 0) {%>
             <div class="alert alert-info" style="text-align:center;" role="alert">
