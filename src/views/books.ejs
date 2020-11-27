@@ -43,30 +43,26 @@
                             </div>
                         </div>  
                         <div class="border border-dark" id="bookInfo">
-                            <div>
-                                <ul class="list">
-                                    <li class="bookTitleLabel">
-                                        Title: 
-                                        <br>
-                                        <%=results[i].best_book.title%>
-                                    </li>
-                                    <hr class="divider" color="black" >
-                                    <li class="bookAuthorLabel">
-                                        Author: 
-                                        <br>
-                                        <%=results[i].best_book.author.name%>
-                                    </li>
-                                    <button onClick="showLoadingButton(<%=i%>)" id="moreInfoButton<%=i%>">
-                                        <a href="https://www.goodreads.com/book/title?id=<%=results[i].best_book.title%>">More info</a>
-                                    </button>
-                                    <div>
-                                        <button class="btn btn-primary" id="loadingButton<%=i%>" style="visibility: hidden;" disabled>
-                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                            <span class="sr-only">Loading...</span>
-                                        </button>
-                                    </div>
-                                </ul>
-                            </div>
+                            <ul class="aboutList">
+                                <li class="bookTitleLabel">
+                                    Title: 
+                                    <br>
+                                    <%=results[i].best_book.title%>
+                                </li>
+                                <hr class="divider" color="black" >
+                                <li class="bookAuthorLabel">
+                                    Author: 
+                                    <br>
+                                    <%=results[i].best_book.author.name%>
+                                </li>
+                                <button onClick="showLoadingButton(<%=i%>)" id="moreInfoButton<%=i%>">
+                                    <a href="https://www.goodreads.com/book/title?id=<%=results[i].best_book.title%>">More info</a>
+                                </button>
+                                <button class="btn btn-primary" id="loadingButton<%=i%>" style="visibility: hidden;" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    <span class="sr-only">Loading...</span>
+                                </button>
+                            </ul>
                         </div>
                     </div>
                 <%}%>
