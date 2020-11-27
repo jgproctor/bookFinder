@@ -1,14 +1,10 @@
 .title {
   text-align: center;
-  color: rgba(13, 40, 158, 0.877);
-}
-
-.returnHome {
-  color:  red(13, 40, 158, 0.877);
+  color: rgba(24, 115, 233, 0.877);
 }
 
 .content {
-  background-color: lightcoral;
+  background-color: burlywood;
 }
 
 .bookTitleLabel {
@@ -29,21 +25,48 @@
   margin-bottom: 2rem;
 }
 
-#searchResultsTable {
-  background: black;
-  width: auto;
-  height: auto;
+.row {
+  display: flex;
+  background-color: burlywood;
 }
 
 #bookImage {
-  text-align: center;
-  column-width: auto;
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  flex: 1;
+  padding: 1em;
 }
 
 #bookInfo {
-  width: auto;
+  display: flex;
+  align-items: flex-start;
+  overflow:hidden;
+  border: 1px solid #ccc;
+  flex: 1;
+  padding: 1em;
 }
 
-.divider {
-  display: inherit;
+.list {
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: flexbox;
+  padding: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+@media screen and (max-width: 400px) {
+  .bookImage { 
+   float: none;
+   margin-right:0;
+   width:auto;
+   border:0;
+   border-bottom:2px solid #000;    
+ }
 }
