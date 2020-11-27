@@ -1,12 +1,13 @@
+/* eslint-disable no-multi-assign */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-console */
+/* eslint-disable import/extensions */
 import express from 'express';
 import chalk from 'chalk';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
-// eslint-disable-next-line import/extensions
 import bookRouter from '../routes/bookRouter.js';
 
 const { urlencoded, json } = bodyParser;

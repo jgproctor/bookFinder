@@ -2,7 +2,7 @@
   "name": "bookfinder",
   "version": "1.0.0",
   "description": "Search for the books you enjoy!",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "nodemon --experimental-modules ./src/server/server.js",

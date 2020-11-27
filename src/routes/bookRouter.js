@@ -16,7 +16,7 @@ export default function bookRouter() {
     res.render(
       'books.ejs',
       {
-        results
+        results,
       }
     );
   }
