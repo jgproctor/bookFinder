@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-modules ./src/server/server.js",
+    "start": "nodemon ./src/server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
@@ -49,5 +49,8 @@
     "eslint": "7.12.0",
     "eslint-config-airbnb-base": "14.2.0",
     "eslint-plugin-import": "2.22.1"
+  },
+  "engines": {
+    "node": "12.18.3"
   }
 }
