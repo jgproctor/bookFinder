@@ -16,7 +16,6 @@ const { join, dirname } = path;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const server = express();
-const { green } = chalk;
 
 server.use(urlencoded({ extended: true }));
 server.use(json());
