@@ -35,4 +35,4 @@ server.get('/', (req, res) => {
   );
 });
 
-server.listen(process.env.port || 5000);
+server.listen(process.env.PORT || 5000);
