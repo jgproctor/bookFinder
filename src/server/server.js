@@ -17,7 +17,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const server = express();
 const { green } = chalk;
-const port = process.env.port || 3000;
 
 server.use(urlencoded({ extended: true }));
 server.use(json());
@@ -36,6 +35,4 @@ server.get('/', (req, res) => {
   );
 });
 
-server.listen(port, () => {
-  console.log(`Running on port ${green(port)}`);
-});
+server.listen(process.env.port || 5000);
